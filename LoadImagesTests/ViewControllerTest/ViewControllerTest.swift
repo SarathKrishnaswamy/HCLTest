@@ -37,7 +37,6 @@ class ViewModelTests: XCTestCase {
         // Then
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertEqual(self.viewModel.images?.hits.count, 4)
-            //XCTAssertEqual(self.viewModel.images?.hits.first?.previewURL, "https://example.com/image.jpg")
             expectation.fulfill()
         }
 
@@ -56,7 +55,6 @@ class ViewModelTests: XCTestCase {
         // Then
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertNil(self.viewModel.images)
-            //XCTAssertNotNil(self.viewModel.error)
             expectation.fulfill()
         }
 
